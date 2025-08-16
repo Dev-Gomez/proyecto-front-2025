@@ -1,0 +1,122 @@
+header {
+    padding: 20px 0;
+    position: relative;
+    z-index: 99;
+
+    .container{
+
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+             .logo{
+
+                img{
+
+                    width: 70px;
+                    height: 43px;
+                }
+
+            }
+
+             ul.navigator{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                position: relative;
+
+                &.show{
+                    @media (width < 768px){
+                    transform: translateX(0px);      
+
+                    }
+                }
+
+                .close-navbar{
+                    color: #fff;
+                    display: none;
+
+                    @media (width <768px) {
+                        display: block;
+                        position: absolute;
+                        top: 15px;
+                        right: 015px;
+                    }
+                    svg{
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+
+                @media (width < 768px){
+                    background: #000;
+                    position:fixed;
+                    top:0;
+                    right:0;
+                    width: 350px;
+                    height: 100vh;
+                    flex-direction: column;
+                 transform: translateX(400px); 
+                 transition: all 0.4s; 
+                    
+            
+            }
+                        
+                 li{
+                    a{
+                       color:$gray;
+                       font-family: $primary-font-regular;
+                       font-size: 12px;
+                       line-height: 12px;
+                       letter-spacing: 3px;
+                       font-weight: 400;
+                       border-top: 2px solid transparent;
+                       border-bottom: 2px solid transparent; 
+                       padding: 6.5px 0 ;
+                       transition: all 0.3s;
+
+                       @media (width < 768px) {
+                        color: #fff;
+                        font-size: 16px;
+                        }
+
+                        &:hover{
+                            border-top: 2px solid $gray;
+                            border-bottom: 2px solid $gray ;
+
+                            @media (width < 768px) {
+                                border-top: 2px solid #fff;
+                            border-bottom: 2px solid #fff ;
+                            }
+                            
+
+                          
+                       
+
+                       
+                        }
+
+
+                    }
+                 }
+
+             }
+
+             .navbar{
+                color: #000;
+                display: none;
+
+                @media (width < 768px) {
+                    display: block;
+                }
+
+                svg{
+                    width: 30px;
+                    height: 30px;
+                }
+             }
+         }
+    }
+}

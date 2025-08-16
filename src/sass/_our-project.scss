@@ -1,0 +1,158 @@
+.our-project {
+    padding: 80px 0;
+
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+
+        h3 {
+            font-family: $primary-font-light;
+            font-size: 64px;
+            line-height: 64px;
+            font-weight: 300;
+            color: $gray-lite;
+        }
+
+        .container-cards {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+
+
+
+
+            .card {
+                position: relative;
+                max-width: 49%;
+                width: 100%;
+                height: 255px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                overflow: hidden;
+
+                @media (width < 1050px) {
+                        max-width: 31% !important;
+
+                        .overlay{
+                            padding: 30px !important;
+
+                            p {
+                                font-size: 35px !important;
+                                line-height: 35px !important;
+                            }
+                        }
+                    }
+
+                     @media (width < 768px) {
+                        max-width: 100% !important;
+                    }
+
+                &.small{
+                    
+                    max-width: 270px;
+
+                    @media (width < 1200px) {
+                        max-width: 49%;
+                    }
+
+                    .overlay{
+                        padding: 30px;
+                    }
+                }
+
+                &.medium {
+
+                    max-width: 370px;
+                    
+
+                }
+
+                &.wide{
+                    max-width: 470px;
+                    @media (width < 1200px) {
+                        max-width: 49%;
+                    }
+
+
+                }
+
+                &.full{
+
+                    .overlay{
+                        padding: 80px;
+                    }
+
+                }
+
+                &.overlay{
+
+                }
+
+                .overlay {
+                    background: rgba($gray, 0.6);
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    padding: 60px;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    gap: 5px;
+                    z-index: -1;
+
+
+
+                    p {
+                        font-family: $primary-font-bold;
+                        font-size: 64px;
+                        line-height: 64px;
+                        font-weight: 700;
+
+                    }
+
+                    span {
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        line-height: 12px;
+                        letter-spacing: 4px;
+
+
+
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all 0.3s;
+                }
+
+                &:hover {
+                    .overlay {
+                        z-index: 10;
+                    }
+
+                    img {
+                        filter: grayscale(80%) blur(2px);
+                        transform: scale(1.05);
+
+                    }
+                }
+            }
+
+        }
+
+        .btn{
+            align-self: flex-end;
+        }
+    }
+}
