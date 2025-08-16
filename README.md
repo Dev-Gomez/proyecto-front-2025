@@ -5,4 +5,7 @@
 > Node_modules : https://nodejs.org/es
 
 comandos:
-> npx gulp
+
+> npm install
+
+> npx gulp 
